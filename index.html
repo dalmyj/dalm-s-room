@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <title>dalm's room</title>
   <style>
     @font-face {
@@ -31,8 +31,8 @@
 
     h1 {
       color: #ffccff;
-      text-shadow: 1px 1px 0 #000;
-      margin: 0;
+  text-shadow: 1px 1px 0 #000;
+  margin: 0;
     }
 
     nav {
@@ -144,7 +144,6 @@
 
     iframe {
       margin: 10px;
-      max-width: 100%;
     }
 
     footer {
@@ -160,57 +159,62 @@
       height: 30px;
       background: url('https://pngimg.com/uploads/moon/moon_PNG35.png') no-repeat center/cover;
     }
+@media (max-width: 768px) {
+  header h1 div:first-child {
+    font-size: 28px;
+  }
 
-    /* 📱 모바일 대응 스타일 */
-    @media (max-width: 768px) {
-      header {
-        padding: 10px;
-        font-size: 14px;
-      }
+  header h1 div:last-child {
+    font-size: 16px;
+  }
 
-      h1 div:first-child {
-        font-size: 24px !important;
-      }
+  nav a {
+    display: block;
+    margin: 8px auto;
+    width: 80%;
+    font-size: 14px;
+  }
 
-      h1 div:last-child {
-        font-size: 14px !important;
-      }
+  .who-am-i, .details, .link-group {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+  }
 
-      nav a {
-        display: block;
-        margin: 8px auto;
-        width: 80%;
-        font-size: 14px;
-      }
+  .who-am-i p, .details p {
+    font-size: 13px;
+  }
 
-      .who-am-i,
-      .details,
-      .link-group {
-        width: 90%;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 15px;
-      }
+  .icons img {
+    width: 40px;
+    height: 40px;
+  }
 
-      .icons img {
-        width: 40px;
-        height: 40px;
-      }
+  marquee {
+    font-size: 16px;
+  }
 
-      marquee {
-        font-size: 16px;
-      }
+  button {
+    width: 90%;
+    font-size: 14px;
+    padding: 10px;
+  }
 
-      button {
-        font-size: 14px;
-        width: 90%;
-        margin: 5px auto;
-      }
+  iframe {
+    width: 100% !important;
+  }
 
-      iframe {
-        width: 100% !important;
-      }
-    }
+  body {
+    font-size: 14px;
+    padding: 0 5px;
+  }
+
+  .tab-content {
+    padding: 20px 10px;
+  }
+}
+
   </style>
 </head>
 
@@ -219,9 +223,9 @@
 
   <header>
     <h1>
-      <div style="font-size: 40px;">⋆⁺₊⋆dalm's room⋆⁺₊⋆</div>
-      <div style="font-size: 20px;">우리집에 온 걸 환영해!</div>
-    </h1>
+  <div style="font-size: 40px;">⋆⁺₊⋆dalm's room⋆⁺₊⋆</div>
+  <div style="font-size: 20px;">우리집에 온 걸 환영해!</div>
+</h1>
     <nav>
       <a onclick="showTab('home')">Home</a>
       <a onclick="showTab('who')">Who's dalm?</a>
@@ -238,9 +242,9 @@
       <h2>퀴즈 타임! 🌙🧊</h2>
       <p style="font-size: 16px;">달음은 무슨뜻이게~?</p>
       <div style="margin-top: 20px;">
-        <button onclick="checkAnswer(1)">1. 달음은 뭔가 다름 +_+</button><br>
-        <button onclick="checkAnswer(2)">2. 너에게로 한 달음에 달려갈거야 >_&lt;</button><br>
-        <button onclick="checkAnswer(3)">3. 달과 얼음 ˃̵ ᴗ ˂̵✦</button>
+        <button onclick="checkAnswer(1)" style="margin: 10px;">1. 달음은 뭔가 다름 +_+</button><br>
+        <button onclick="checkAnswer(2)" style="margin: 10px;">2. 너에게로 한 달음에 달려갈거야 >_&lt;</button><br>
+        <button onclick="checkAnswer(3)" style="margin: 10px;">3. 달과 얼음 ˃̵ ᴗ ˂̵✦</button>
       </div>
       <p id="quiz-result" style="margin-top: 20px; font-size: 16px;"></p>
     </div>
@@ -251,17 +255,20 @@
     <div class="who-am-i">
       <h2>dalm(달음)</h2>
       <p><strong>달음</strong>은 '달'과 '얼음'의 합성어입니다. 저는 이 두 가지를 닮고 싶어요.</p>
+
       <div class="icons">
         <img src="https://img.icons8.com/ios/50/000000/moon.png" alt="달 아이콘" onclick="showDetails('moon')">
         <img src="https://img.icons8.com/ios/50/000000/snowflake.png" alt="얼음 아이콘" onclick="showDetails('ice')">
         <span>☜ click!</span>
       </div>
+
       <div id="moon-details" class="details">
         <p>뜨고 질 때마다 하늘을 물들이는 유난스러운 해와 달리  
 달은 언제부터 떠있었는지 언제 졌는지도 모르게 뜨고 집니다. 그러면서도 어두운 밤하늘을 인자하게 밝히죠.  
 그 거대한 아름다움을 가지고도 그렇게나 겸손할 수 있다니! 그 점이 달을 더 신비롭게 해주는 것 같아요.  
 아름답고 겸손한 사람이 되고싶어요.</p>
       </div>
+
       <div id="ice-details" class="details">
         <p>얼음은 뜨거운 것을 만났을 때 온기를 옮아오지 않아요.  
 자신의 몸이 모두 녹아버릴지언정, 차가움이라는 속성을 절대 잃지 않지요.  
@@ -286,12 +293,15 @@
 
     <div class="link-group">
       <h3>SoundCloud</h3>
-      <a href="https://soundcloud.com/dalm11" target="_blank">1호점약국</a><br><br>
-      <iframe height="166" scrolling="no" frameborder="no" allow="autoplay"
+      <a href="https://soundcloud.com/dalm11" target="_blank">1호점약국</a>
+      <br><br>
+      <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
         src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/dalm11&color=%23ffccff&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
-      </iframe><br><br>
-      <a href="https://soundcloud.com/dalm-pharmacy-ver2" target="_blank">2호점약국 (New!)</a><br><br>
-      <iframe height="166" scrolling="no" frameborder="no" allow="autoplay"
+      </iframe>
+      <br><br>
+      <a href="https://soundcloud.com/dalm-pharmacy-ver2" target="_blank">2호점약국 (New!)</a>
+      <br><br>
+      <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
         src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/dalm-pharmacy-ver2&color=%23ffccff&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
       </iframe>
     </div>
@@ -306,7 +316,7 @@
     </div>
   </div>
 
-  <!-- COMMENT -->
+  <!-- COMMENT (비워둠) -->
   <div id="comment" class="tab-content">
     <p>여기에 방명록이나 댓글 시스템을 추가할 수 있어요 :)</p>
   </div>
