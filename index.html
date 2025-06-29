@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>dalm's room</title>
+  <style>
+    @font-face {
+      font-family: 'exqt';
+      src: url('fonts/exqt.ttf') format('truetype');
+    }
+
+    body {
+      background-image: url('https://i.pinimg.com/originals/2b/bc/93/2bbc93513dbf512cdcc8021b2e3a7401.gif');
+      background-repeat: repeat;
+      color: #fff;
+      font-family: 'exqt', sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      cursor: url('https://cur.cursors-4u.net/cursors/cur-9/cur838.cur'), auto;
+      letter-spacing: normal;
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      font-size: 16px;
+    }
+
+    h1 {
+      color: #ffccff;
+  text-shadow: 1px 1px 0 #000;
+  margin: 0;
+    }
+
+    nav {
+      margin-top: 15px;
+    }
+
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #99ffff;
+      border: 1px dashed #99ffff;
+      padding: 5px;
+      background-color: rgba(0, 0, 0, 0.4);
+      cursor: pointer;
+    }
+
+    marquee {
+      color: pink;
+      font-size: 20px;
+      margin: 20px 0;
+    }
+
+    .tab-content {
+      display: none;
+      padding: 30px;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    .who-am-i {
+      margin-top: 30px;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 15px;
+      width: 80%;
+      margin-left: 10%;
+    }
+
+    .who-am-i h2 {
+      color: #ffccff;
+    }
+
+    .who-am-i p {
+      font-size: 14px;
+      color: #ffffff;
+      line-height: 1.8;
+      white-space: pre-line;
+    }
+
+    .icons {
+      margin-top: 10px;
+    }
+
+    .icons img {
+      width: 50px;
+      height: 50px;
+      margin: 5px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .icons img:hover {
+      transform: scale(1.2);
+    }
+
+    .icons span {
+      font-size: 12px;
+      color: #ccc;
+      display: block;
+      margin-top: -10px;
+    }
+
+    .details {
+      display: none;
+      margin-top: 15px;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 10px;
+      border-radius: 10px;
+      width: 80%;
+      margin-left: 10%;
+      font-size: 14px;
+      color: #ffffff;
+    }
+
+    .link-group {
+      background-color: rgba(0, 0, 0, 0.4);
+      border-radius: 10px;
+      padding: 15px;
+      margin: 10px;
+    }
+
+    .link-group h3 {
+      color: white;
+      font-size: 16px;
+    }
+
+    .link-group a {
+      color: pink;
+      text-decoration: none;
+      display: inline-block;
+      margin: 5px 10px;
+    }
+
+    .link-group a:hover {
+      color: #ff99ff;
+    }
+
+    iframe {
+      margin: 10px;
+    }
+
+    footer {
+      font-size: 10px;
+      color: #ccc;
+      margin-top: 30px;
+    }
+
+    #moon {
+      position: absolute;
+      pointer-events: none;
+      width: 30px;
+      height: 30px;
+      background: url('https://pngimg.com/uploads/moon/moon_PNG35.png') no-repeat center/cover;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="moon"></div>
+
+  <header>
+    <h1>
+  <div style="font-size: 40px;">⋆⁺₊⋆dalm's room⋆⁺₊⋆</div>
+  <div style="font-size: 20px;">우리집에 온 걸 환영해!</div>
+</h1>
+    <nav>
+      <a onclick="showTab('home')">Home</a>
+      <a onclick="showTab('who')">Who's dalm?</a>
+      <a onclick="showTab('about')">About dalm</a>
+      <a onclick="showTab('comment')">Comment</a>
+    </nav>
+  </header>
+
+  <marquee>🌙 달음이의 방에 와줘서 고마워! 🧊</marquee>
+
+  <!-- HOME -->
+  <div id="home" class="tab-content active">
+    <div class="who-am-i">
+      <h2>퀴즈 타임! 🌙🧊</h2>
+      <p style="font-size: 16px;">달음은 무슨뜻이게~?</p>
+      <div style="margin-top: 20px;">
+        <button onclick="checkAnswer(1)" style="margin: 10px;">1. 달음은 뭔가 다름 +_+</button><br>
+        <button onclick="checkAnswer(2)" style="margin: 10px;">2. 너에게로 한 달음에 달려갈거야 >_&lt;</button><br>
+        <button onclick="checkAnswer(3)" style="margin: 10px;">3. 달과 얼음 ˃̵ ᴗ ˂̵✦</button>
+      </div>
+      <p id="quiz-result" style="margin-top: 20px; font-size: 16px;"></p>
+    </div>
+  </div>
+
+  <!-- WHO'S DALM -->
+  <div id="who" class="tab-content">
+    <div class="who-am-i">
+      <h2>dalm(달음)</h2>
+      <p><strong>달음</strong>은 '달'과 '얼음'의 합성어입니다. 저는 이 두 가지를 닮고 싶어요.</p>
+
+      <div class="icons">
+        <img src="https://img.icons8.com/ios/50/000000/moon.png" alt="달 아이콘" onclick="showDetails('moon')">
+        <img src="https://img.icons8.com/ios/50/000000/snowflake.png" alt="얼음 아이콘" onclick="showDetails('ice')">
+        <span>☜ click!</span>
+      </div>
+
+      <div id="moon-details" class="details">
+        <p>뜨고 질 때마다 하늘을 물들이는 유난스러운 해와 달리  
+달은 언제부터 떠있었는지 언제 졌는지도 모르게 뜨고 집니다. 그러면서도 어두운 밤하늘을 인자하게 밝히죠.  
+그 거대한 아름다움을 가지고도 그렇게나 겸손할 수 있다니! 그 점이 달을 더 신비롭게 해주는 것 같아요.  
+아름답고 겸손한 사람이 되고싶어요.</p>
+      </div>
+
+      <div id="ice-details" class="details">
+        <p>얼음은 뜨거운 것을 만났을 때 온기를 옮아오지 않아요.  
+자신의 몸이 모두 녹아버릴지언정, 차가움이라는 속성을 절대 잃지 않지요.  
+뜨거운 물속에 담아도 얼음 자신은 그저 차가울 뿐이에요.  
+그렇게 끝까지 저의 가치와 철학을 굳세게 지켜나가고싶어요.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT DALM -->
+  <div id="about" class="tab-content">
+    <div class="link-group">
+      <h3>Youtube</h3>
+      <a href="https://youtu.be/EM3KVKFgTgI?si=EqvEpCy6rsm5Y-Ic" target="_blank">MIXMIX (Funk+House set)</a>
+      <a href="https://youtu.be/NhMMPFdLBIk?si=jbvj3OQZB9WqKf4h" target="_blank">SCR (Oldschool set)</a>
+    </div>
+
+    <div class="link-group">
+      <h3>Instagram</h3>
+      <a href="https://www.instagram.com/moon_n_ice" target="_blank">@moon_n_ice</a>
+    </div>
+
+    <div class="link-group">
+      <h3>SoundCloud</h3>
+      <a href="https://soundcloud.com/dalm11" target="_blank">1호점약국</a>
+      <br><br>
+      <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
+        src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/dalm11&color=%23ffccff&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
+      </iframe>
+      <br><br>
+      <a href="https://soundcloud.com/dalm-pharmacy-ver2" target="_blank">2호점약국 (New!)</a>
+      <br><br>
+      <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
+        src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/dalm-pharmacy-ver2&color=%23ffccff&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
+      </iframe>
+    </div>
+
+    <div class="link-group">
+      <h3>dalm(달음)참여곡 ☾˚₊✩‧₊* ⋆</h3>
+      <iframe style="border-radius:12px"
+        src="https://open.spotify.com/embed/playlist/2a3ASBaAlZVQmRiFd7w2lF?utm_source=generator" width="100%"
+        height="152" frameborder="0"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+      </iframe>
+    </div>
+  </div>
+
+  <!-- COMMENT (비워둠) -->
+  <div id="comment" class="tab-content">
+    <p>여기에 방명록이나 댓글 시스템을 추가할 수 있어요 :)</p>
+  </div>
+
+  <footer>
+    ⓒ dalm’s room | 🌙🧊
+  </footer>
+
+  <script>
+    const moon = document.getElementById('moon');
+    document.addEventListener('mousemove', e => {
+      moon.style.left = `${e.pageX + 10}px`;
+      moon.style.top = `${e.pageY + 10}px`;
+    });
+
+    function showDetails(type) {
+      document.getElementById('moon-details').style.display = 'none';
+      document.getElementById('ice-details').style.display = 'none';
+      if (type === 'moon') {
+        document.getElementById('moon-details').style.display = 'block';
+      } else if (type === 'ice') {
+        document.getElementById('ice-details').style.display = 'block';
+      }
+    }
+
+    function showTab(tabId) {
+      const tabs = document.querySelectorAll('.tab-content');
+      tabs.forEach(tab => tab.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+    }
+
+    function checkAnswer(choice) {
+      const result = document.getElementById('quiz-result');
+      if (choice === 3) {
+        result.innerHTML = "정답! 🌙🧊 역시 너는 나를 잘 알아~! ヾ(≧▽≦*)o";
+        result.style.color = "#ccffcc";
+      } else {
+        result.innerHTML = "아쉽지만 틀렸어! 다시 생각해봐~ ₍՞⸝⸝> ̫ <⸝⸝՞₎";
+        result.style.color = "#ffcccc";
+      }
+    }
+  </script>
+</body>
+
+</html>
